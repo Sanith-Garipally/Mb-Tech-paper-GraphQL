@@ -8,7 +8,7 @@ GraphQL is a query language for [APIs](https://www.redhat.com/en/topics/api/what
 In simple words, it is used to load data from a server to a client (i.e. from an API to your application) much more efficiently than traditional services.
 
 ## **What is the problem with the current API's ?**
-Let's understand this with the help of a scenario,
+Let's understand with the help of a scenario,
 
 Consider we are building an blogging app using REST API where we want to display the user's:
 
@@ -44,7 +44,7 @@ For this use case we will be requiring two API Endpoints:
 
 ```
 
-The above two code snippets are the HTTP responses, If we observe closely we require the name of the user and title of the posts, but when we are receiving the response we are fetching the extra data like address, content, comments.
+The above two code snippets are the HTTP responses, we require only name and post's title but along with them we are fetching unnecessary data like address, content, comments.
 
 There are two main problems with the current REST APIs:
 * **Over fetching.**
@@ -79,17 +79,15 @@ Using GraphQL, the client can specify exactly the data it needs in a query. Noti
 The GraphQL API uses three main components:
 
 * **Queries.**
-A query is the request the client makes. Query fields can point to arrays and support arguments.
+A query is the request the client makes. 
 
 * **Resolvers.**
- The GraphQL server won't know what to do with the queries it gets unless you tell it. This is done using a resolver. In simple terms, a resolver tells GraphQL how (and where) to fetch the data corresponding to a specific field. 
+A resolver tells GraphQL how (and where) to fetch the data corresponding to a specific query. 
 
 * **Schema.**
- A GraphQL schema describes the functionality clients can utilize once they connect to the GraphQL server. The core building block within schemas is called a type.
+A GraphQL schema describes the functionality clients can utilize once they connect to the GraphQL server. The core building block within schemas is called a type.
 
 # **Architecture**
-Let's see the architecture of GraphQL to understand how GraphQL is used in an HTTP client, especially in a web/mobile app.
-
 GraphQL was released as a specification. The specification describes the behavior of the GraphQL server. It provides some guidelines to handle requests from the clients and responses from the server, such as supported protocols, the format of the data that the server accepts, the format of the server's response, etc.
 
 When a client requests a query to communicate with the server, the transport layer of GraphQL
@@ -104,7 +102,7 @@ The GraphQL server doesn't care about the database you use. It is neutral to dat
 * The server receives and extracts the query string. After that, the server processes and validates the GraphQL query according to the GraphQL syntax and the graph data model (GraphQL schema).
 
 * Like the other API servers, the GraphQL API server also makes calls to a database or other services and retrieves the data requested by the client.
-    After that, the server takes the data and returns it to the client in a JSON object.
+After that, the server takes the data and returns it to the client in a JSON object.
 
 There are three common architectural models for a GraphQL server.
 
@@ -118,7 +116,7 @@ After resolving the query, the response is returned to the client in the officia
 ![](https://static.javatpoint.com/tutorial/graphql/images/graphql-architecture.png)
 
 In the above architecture, you can see that the GraphQL server and the database are integrated on a single node. The client communicates with the GraphQL server by sending a query via computer/ mobile over HTTP
-. After receiving the query, the GraphQL server processes the request retrieves data from the database and returns it to the client.
+. After receiving the query, the GraphQL server processes the request, retrieves data from the database and returns it to the client.
 
 ## **GraphQL server integrated with the existing system**
 This architecture model is used for companies having complicated projects which have legacy infrastructure and many different APIs. In this architecture model, GraphQL can be used to merge microservices, legacy infrastructure, and third-party APIs in the existing system and hide the complexity of data fetching logic. The server doesn't care about the database you use. It may be a relational or a NoSQL database.
@@ -133,7 +131,11 @@ This architecture model is a combination of the above two approaches: the GraphQ
 ![](https://static.javatpoint.com/tutorial/graphql/images/graphql-architecture3.png)
 
 # **Conclusion**
-GraphQl
+If your API is intended to be used on a mobile application or a large application like Facebook Newsfeed, use GraphQL since it offers better bandwidth usage. Or, applications where we usually need nested data to be fetched. i.e. blog posts with their comments and people details, GraphQL will be effective and efficient choice.
+
+If you need caching and monitoring facilities in your API, Or, public APIs where we want to determine what to expose to the clients, REST will be better choice.
+
+You can also use a combination of GraphQL and REST for a project. It all depends on your data and performance requirements.
 
 # **References**
 [www.javatpoint.com](https://www.javatpoint.com/graphql-architecture)
