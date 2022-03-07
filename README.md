@@ -133,7 +133,7 @@ This architecture model is a combination of the above two approaches: the GraphQ
 ![](https://static.javatpoint.com/tutorial/graphql/images/graphql-architecture3.png)
 
 # **Conclusion**
-asdfghjk
+GraphQl
 
 # **References**
 [www.javatpoint.com](https://www.javatpoint.com/graphql-architecture)
