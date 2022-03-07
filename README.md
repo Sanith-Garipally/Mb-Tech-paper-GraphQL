@@ -131,9 +131,9 @@ This architecture model is a combination of the above two approaches: the GraphQ
 ![](https://static.javatpoint.com/tutorial/graphql/images/graphql-architecture3.png)
 
 # **Conclusion**
-If your API is intended to be used on a mobile application or a large application like Facebook Newsfeed, use GraphQL since it offers better bandwidth usage. Or, applications where we usually need nested data to be fetched. i.e. blog posts with their comments and people details, GraphQL will be effective and efficient choice.
+If your API is intended to be used on a mobile application or a large application like Facebook Newsfeed or applications where we usually need nested data to be fetched i.e. blog posts with their comments and people details, In these use cases GraphQL will be effective and efficient choice as it offers better bandwidth usage.
 
-If you need caching and monitoring facilities in your API, Or, public APIs where we want to determine what to expose to the clients, REST will be better choice.
+If you need caching and monitoring facilities in your API, Or, public APIs where we want to determine what to expose to the clients, using REST will be better choice.
 
 You can also use a combination of GraphQL and REST for a project. It all depends on your data and performance requirements.
 
