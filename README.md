@@ -5,7 +5,7 @@
 ## **What is GraphQl ?**
 GraphQL is a query language for [APIs](https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces) developed by Facebook in 2012. 
 
-In simple words, it is used to load data from a server to a client (i.e. from an API to your application) much more efficiently than traditional services.
+In simple word, it is used to load data from a server to a client (i.e. from an API to your application) much more efficiently than traditional services.
 
 ## **What is the problem with the current API's ?**
 Let's understand with the help of a scenario,
